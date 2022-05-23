@@ -1,0 +1,213 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: black;
+  height: 100vh;
+  width: 100vw;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #E6D5B8;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  margin: 5px;
+}
+
+.bitan {
+  text-align: center;
+  font-size: larger;
+  color: royalblue;
+}
+
+.naslov {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  color: #cf1b1b;
+  font-size: 124px;
+  letter-spacing: 8px;
+  cursor: pointer;
+}
+
+.naslov::before {
+  content: "GALERIJA SLIKA";
+  position: absolute;
+  color: transparent;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent 0,
+    transparent 2px,
+    white 2px,
+    white 4px
+  );
+  -webkit-background-clip: text;
+  top: 0px;
+  left: 0;
+  z-index: -1;
+  transition: 1s;
+}
+
+.naslov::after {
+  content: "GALERIJA SLIKA";
+  position: absolute;
+  color: transparent;
+  background-image: repeating-linear-gradient(
+    135deg,
+    transparent 0,
+    transparent 2px,
+    white 2px,
+    white 4px
+  );
+  -webkit-background-clip: text;
+  top: 0px;
+  left: 0px;
+  transition: 1s;
+}
+
+.naslov:hover:before {
+  top: 10px;
+  left: 10px;
+}
+
+.naslov:hover:after {
+  top: -10px;
+  left: -10px;
+}
+
+li a:hover {
+  background-color: #111;
+  color: #F0A500;
+}
+.active {
+  background-color: #111;
+  color: #F0A500;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  margin-top: 5px;
+}
+.container .card {
+  max-width: 300px;
+  height: 215px;
+  margin: 30px 10px;
+  padding: 20px 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out
+}
+
+.container .card:hover {
+  height: 450px
+}
+
+.container .card .imgContainer {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  top: -50px;
+  left: 10px;
+  z-index: 1;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2)
+}
+
+.container .card .imgContainer img {
+  max-width: 100%;
+  border-radius: 4px
+}
+
+.container .card .content {
+  position: relative;
+  margin-top: -140px;
+  padding: 10px 15px;
+  text-align: center;
+  color: #111;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease-in-out
+}
+
+.container .card:hover .content {
+  visibility: visible;
+  opacity: 1;
+  margin-top: -40px;
+  transition-delay: 0.3s
+}
+
+@media (max-width: 330px) {
+  .container .card .imgContainer {
+      left: -2px
+  }
+}
+.nopage {
+  text-align: center;
+  color: red;
+  top: 45%;
+  position: fixed;
+  left: 40%;
+  right: 40%;
+}
+.login {
+  float: right;
+}
+.meni {
+  overflow: hidden;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.l1 {
+  display: none;
+}
+.obavestenje {
+  color: orangered;
+  text-align: center;
+  top: 45%;
+  position: absolute;
+  left: 40%;
+  right: 40%;
+}
+.labels {
+  color: #F0A500;
+}
+#loginform {
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  right: 40%;
+}
+#contactforma {
+  margin-top: 50px;
+}
